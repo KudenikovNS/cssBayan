@@ -90,7 +90,7 @@
     display: block;
     transition: 0.6s ease-in-out;
   }
-  .accordion__content:hover i[id^="i"] {
+  .accordion__content:hover i[id^="index_"] {
     rotate: 45deg;
   }
 }
