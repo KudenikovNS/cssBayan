@@ -49,15 +49,6 @@
   cursor: pointer;
 }
 
-.accordion__label:hover ~ .accordion__img,
-.accordion__img:hover,
-.accordion__input[id^="accordion_"]:checked ~ label[id^="accordion__img"] {
-  max-height: 100vh;
-  transition-duration: 1s;
-  transition-property: max-height;
-  cursor: pointer;
-}
-
 .accordion__content:active .accordion__label,
 .accordion__content:active .accordion__label-i {
   color: #fff;
@@ -83,16 +74,11 @@
   padding: 1.2em 0;
 }
 
-@media (hover: hover) {
-  .wrapper:hover,
-  .wrapper:hover i {
-    color: #000;
-    display: block;
-    transition: 0.6s ease-in-out;
-  }
-  .accordion__content:hover i[id^="index_"] {
-    rotate: 45deg;
-  }
+.accordion__input[id^="accordion_"]:checked ~ label[id^="accordion__img"] {
+  max-height: 100vh;
+  transition-duration: 1s;
+  transition-property: max-height;
+  cursor: pointer;
 }
 
 @media (max-width: 820px) {
@@ -104,6 +90,29 @@
     font-size: 0.9em;
   }
 }
+
+@media (min-width: 820px) {
+  .accordion__label:hover ~ .accordion__img,
+  .accordion__img:hover,
+  .accordion__input[id^="accordion_"]:checked ~ label[id^="accordion__img"] {
+    max-height: 100vh;
+    transition-duration: 1s;
+    transition-property: max-height;
+    cursor: pointer;
+  }
+
+  .wrapper:hover,
+  .wrapper:hover i {
+    color: #000;
+    display: block;
+    transition: 0.6s ease-in-out;
+  }
+
+  .accordion__content:hover i[id^="index_"] {
+    rotate: 45deg;
+  }
+}
+
 @media (max-width: 320px) {
   .accordion__title {
     font-size: 1em;
